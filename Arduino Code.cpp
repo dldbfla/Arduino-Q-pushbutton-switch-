@@ -1,16 +1,16 @@
-const int buttonPin = 2;  // 푸시 버튼이 연결된 핀 번호
-int buttonState = 0;      // 현재 버튼 상태
+const int buttonPin = 2; // pin number the push button is connected to
+int buttonState = 0; // current button state
 
 void setup() {
-  pinMode(buttonPin, INPUT_PULLUP);  // 버튼 핀을 풀업 입력으로 설정
-  Serial.begin(9600);  // 시리얼 통신 시작
+  pinMode(buttonPin, INPUT_PULLUP); // Set the button pin as a pull-up input
+  Serial.begin(9600); // Start serial communication
 }
 
 void loop() {
-  buttonState = digitalRead(buttonPin);  // 버튼 상태 읽기
+  buttonState = digitalRead(buttonPin); // read the button state
 
-  if (buttonState == LOW) {  // 버튼이 눌렸는지 확인
-    Serial.println("SLEEP");  // 시리얼 포트로 "SLEEP" 신호 전송
-    delay(500);  // 디바운싱을 위해 약간의 지연
+  if (buttonState == LOW) { // Check if the button is pressed
+    Serial.println(“SLEEP”); // send “SLEEP” signal to the serial port
+    delay(500); // slight delay for debouncing
   }
 }
