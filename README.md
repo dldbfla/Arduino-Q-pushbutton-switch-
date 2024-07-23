@@ -4,7 +4,9 @@
 
 ## Connect the wiring:
 Connect the VCC pin of the pushbutton module to the 5V pin of the Arduino.
+
 Connect the GND pin of the pushbutton module to the GND pin of the Arduino.
+
 Connect the OUT pin of the pushbutton module to a digital pin on the Arduino for D2.
 
 ## Caution:
